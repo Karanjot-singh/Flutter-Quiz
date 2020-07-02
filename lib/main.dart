@@ -16,30 +16,29 @@ class _MyAppState extends State<MyApp> {
   //list containing map objects
   final _questions = const [
     {
-      'questionText': 'What\'s your favorite color?',
+      'questionText': 'Choose one of the following Infinity Stones?',
       'answers': [
-        {'text': 'Black', 'score': 10},
-        {'text': 'Red', 'score': 5},
-        {'text': 'Green', 'score': 3},
-        {'text': 'White', 'score': 1},
+        {'text': 'Time Stone', 'score': 10},
+        {'text': 'Soul Stone', 'score': 5},
+        {'text': 'Mind Stone', 'score': 3},
+        {'text': 'Power Stone', 'score': 1},
       ],
     },
     {
-      'questionText': 'What\'s your favorite animal?',
+      'questionText': 'Who\'s your favorite Avenger?',
       'answers': [
-        {'text': 'Rabbit', 'score': 3},
-        {'text': 'Snake', 'score': 11},
-        {'text': 'Elephant', 'score': 5},
-        {'text': 'Lion', 'score': 9},
+        {'text': 'Natasha Romanoff', 'score': 5},
+        {'text': 'Ironman', 'score': 11},
+        {'text': 'Captain America', 'score': 8},
+        {'text': 'Thor', 'score': 9},
       ],
     },
+    
     {
-      'questionText': 'Who\'s your favorite instructor?',
+      'questionText': 'Choose a Side :',
       'answers': [
-        {'text': 'Max', 'score': 1},
-        {'text': 'Max', 'score': 1},
-        {'text': 'Max', 'score': 1},
-        {'text': 'Max', 'score': 1},
+        {'text': 'Team Cap', 'score': 10},
+        {'text': 'Team Stark', 'score': 18},
       ],
     },
   ];
@@ -72,8 +71,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('QuizIt'),
+        appBar: AppBar( 
+          title: Text('QuizIt: Avengers'),
         ),
         body: _questionIndex < _questions.length
             ? Quiz( //see imported files 

@@ -8,14 +8,14 @@ class Result extends StatelessWidget {
 
   String get resultPhrase {
     String resultText;
-    if (resultScore <= 8) {
-      resultText = 'You are awesome and innocent!';
-    } else if (resultScore <= 12) {
-      resultText = 'Pretty likeable!';
-    } else if (resultScore <= 16) {
-      resultText = 'You are ... strange?!';
+    if (resultScore <= 18) {
+      resultText = 'I can do this all day! Captain America';
+    } else if (resultScore <= 25) {
+      resultText = 'God of Thunder : Thor';
+    } else if (resultScore <= 29) {
+      resultText = 'You are Dr. strange!';
     } else {
-      resultText = 'You are so bad!';
+      resultText = 'You relate most with Ironman!';
     }
     return resultText;
   }
@@ -32,7 +32,7 @@ class Result extends StatelessWidget {
           ),
           FlatButton(
             child: Text(
-              'Restart Quiz!',
+              'Retake Quiz! 14,000,605 Tries Left.',
             ),
             textColor: Colors.blue,
             onPressed: resetHandler,
