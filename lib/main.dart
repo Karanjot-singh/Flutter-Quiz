@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';//for runApp() and other inbuilt functions
 
 import './Quiz.dart';
 import './Result.dart';
@@ -8,7 +8,6 @@ void main() => runApp(MyApp());
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _MyAppState();
   }
 }
@@ -63,9 +62,9 @@ class _MyAppState extends State<MyApp> {
     });
     print(_questionIndex);
     if (_questionIndex < _questions.length) {
-      print('We have more questions!');
+      print('More questions coming up!');
     } else {
-      print('No more questions!');
+      print('You are all caught up!');
     }
   }
 
@@ -74,10 +73,10 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My First App'),
+          title: Text('QuizIt'),
         ),
         body: _questionIndex < _questions.length
-            ? Quiz(
+            ? Quiz( //see imported files 
                 answerQuestion: _answerQuestion,
                 questionIndex: _questionIndex,
                 questions: _questions,

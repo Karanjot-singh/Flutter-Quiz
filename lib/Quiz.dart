@@ -22,10 +22,17 @@ class Quiz extends StatelessWidget {
         Question(
           questions[questionIndex]['questionText'],
         ),
-        //Dynamically choose options for each answer. A list of widgets is created . THis
+        // 33 Dynamically choose options for each question. A list of widgets is created . THis
         //function is executed for each element. //'as' used to depict always string, map ()
-        // takes anonymous function as args. The map is further casted to list and added to
+        // takes anonymous function as args. The map is further cast into list and added to
         // children in column by ... operator
+
+        //<list name>.map(func) executes func on every element of <list name> 
+        // The args of func are automatically provided by dart here, answer
+        // as to excplicitly define the type, here to show that answers is a list
+
+        // to form a list of widgets from questions
+        // ... spread operator appends values to existing list instead of making a nested list
         ...(questions[questionIndex]['answers'] as List<Map<String, Object>>)
             .map((answer) {
           return Answer(() => answerQuestion(answer['score']), answer['text']);
