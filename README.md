@@ -1,6 +1,6 @@
 # quizit
-
-A new Flutter project.
+A simple Avengers themed quiz app.
+My First flutter based Application!
 
 ## Getting Started
 
